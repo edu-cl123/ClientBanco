@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProyectoBank.ClienteBank.PrincipalController">
+   <children>
+      <GridPane layoutX="200.0" layoutY="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.59998168945313" minHeight="10.0" prefHeight="42.799997711181646" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="370.80000534057615" minHeight="10.0" prefHeight="358.00000228881834" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane style="-fx-background-color: #2E86C1;">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <children>
+                  <Label prefHeight="27.0" prefWidth="645.0" text="TODAS LAS CUENTAS" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <children>
+                  <TableView fx:id="TvCuentas" prefHeight="363.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="tcId" prefWidth="183.0" text="ID cuenta" />
+                      <TableColumn fx:id="TcSaldo" prefWidth="220.0" text="SALDO" />
+                        <TableColumn fx:id="TcIdCardCuenta" prefWidth="196.0" text="ID-CARD cuenta" />
+                    </columns>
+                  </TableView>
+               </children>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

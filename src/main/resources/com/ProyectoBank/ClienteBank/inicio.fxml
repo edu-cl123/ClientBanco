@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProyectoBank.ClienteBank.InicioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProyectoBank.ClienteBank.InicioController">
    <children>
       <GridPane layoutX="222.0" layoutY="177.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -47,7 +47,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#Login" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #039BE5;" text="ADMIN" textFill="WHITE" GridPane.halignment="CENTER">
+                  <Button mnemonicParsing="false" onAction="#LoginAdmin" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #039BE5;" text="ADMIN" textFill="WHITE" GridPane.halignment="CENTER">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

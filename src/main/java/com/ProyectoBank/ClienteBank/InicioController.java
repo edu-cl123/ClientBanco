@@ -19,8 +19,21 @@ public class InicioController {
 	@FXML
     private void Login() {   	
     	try {
-    		App.closeScene((Stage) Bclient.getScene().getWindow());
+    		//App.closeScene((Stage) Bclient.getScene().getWindow());
 			App.loadScene(new Stage(), "Login", "Login de la app");
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+	
+	@FXML
+    private void LoginAdmin() {   	
+    	try {
+    		//App.closeScene((Stage) Bclient.getScene().getWindow());
+			App.loadScene(new Stage(), "LoginAdmin", "Login de la app");
 			
 			
 		} catch (IOException e) {

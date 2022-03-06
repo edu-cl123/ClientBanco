@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProyectoBank.ClienteBank.PrincipalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProyectoBank.ClienteBank.PrincipalAdminController">
    <children>
       <GridPane layoutX="200.0" layoutY="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -60,24 +60,19 @@
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="LNombre" layoutX="144.0" layoutY="15.0" GridPane.columnIndex="1">
+                        <Label fx:id="lNombre" layoutX="144.0" layoutY="15.0" text="1" GridPane.columnIndex="1">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Label>
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" onAction="#VerSaldo" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #2E86C1;" text="VER TODOS LOS USUARIOS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#Obtenertodos" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #2E86C1;" text="VER TODOS LOS USUARIOS" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#Insertar" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #2E86C1;" text="VER TODAS LAS CUENTAS " textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#Historial" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #2E86C1;" text="VER TODAS LAS TRANSACCIONES" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#ObtenerCuentas" prefHeight="26.0" prefWidth="242.0" style="-fx-background-color: #2E86C1;" text="VER TODAS LAS CUENTAS " textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

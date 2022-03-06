@@ -2,6 +2,12 @@ package modeloPaqueteEnvio;
 
 import java.io.Serializable;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import modelos.Cuenta;
+import modelos.Usuario;
+
 public class PaqueteEnv implements Serializable{
 
     /**
@@ -11,9 +17,11 @@ public class PaqueteEnv implements Serializable{
 	protected int opcion;
     protected Object objeto1;
     protected Object objeto2;
+    protected Object objeto3;
     protected boolean comprobante;
     protected float cantidad;
-    
+    protected List<Usuario> todoUsuarios=new ArrayList<Usuario>();
+    protected List<Cuenta> todoCuentas=new ArrayList<Cuenta>();
     
     public PaqueteEnv() {
         super();
@@ -50,6 +58,30 @@ public class PaqueteEnv implements Serializable{
  		this.cantidad = cantidad;
  	}
 
+	public PaqueteEnv(int opcion, boolean comprobante, List<Usuario> todoUsuarios) {
+		super();
+		this.opcion = opcion;
+		this.comprobante = comprobante;
+		this.todoUsuarios = todoUsuarios;
+	}
+	public PaqueteEnv(int opcion, Object objeto1, Object objeto2, Object objeto3, boolean comprobante) {
+		super();
+		this.opcion = opcion;
+		this.objeto1 = objeto1;
+		this.objeto2 = objeto2;
+		this.objeto3 = objeto3;
+		this.comprobante = comprobante;
+	}	
+	
+	public List<Cuenta> getTodoCuentas() {
+		return todoCuentas;
+	}
+
+	public void setTodoCuentas(List<Cuenta> todoCuentas) {
+		this.todoCuentas = todoCuentas;
+	}
+
+
     public int getOpcion() {
         return opcion;
     }
@@ -69,8 +101,30 @@ public class PaqueteEnv implements Serializable{
     public Object getObjeto2() {
         return objeto2;
     }
+    public List<Usuario> getTodoUsuarios() {
+ 		return todoUsuarios;
+ 	}
 
-    public void setObjeto2(Object objeto2) {
+ 	public void setTodoUsuarios(List<Usuario> todoUsuarios) {
+ 		this.todoUsuarios = todoUsuarios;
+ 	}
+    public Object getObjeto3() {
+		return objeto3;
+	}
+
+	public void setObjeto3(Object objeto3) {
+		this.objeto3 = objeto3;
+	}
+
+	public float getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(float cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	public void setObjeto2(Object objeto2) {
         this.objeto2 = objeto2;
     }
 
@@ -91,15 +145,23 @@ public class PaqueteEnv implements Serializable{
 
         if (opcion != that.opcion) return false;
         if (comprobante != that.comprobante) return false;
+  
         if (objeto1 != null ? !objeto1.equals(that.objeto1) : that.objeto1 != null) return false;
         return objeto2 != null ? objeto2.equals(that.objeto2) : that.objeto2 == null;
     }
 
-    @Override
-    public String toString() {
-        return "PaqueteEnv [opcion=" + opcion + ", objeto1=" + objeto1 + ", objeto2=" + objeto2 + ", comprobante="
-                + comprobante + "]";
-    }
+	@Override
+	public String toString() {
+		return "PaqueteEnv [opcion=" + opcion + ", objeto1=" + objeto1 + ", objeto2=" + objeto2 + ", objeto3=" + objeto3
+				+ ", comprobante=" + comprobante + ", cantidad=" + cantidad + ", todoUsuarios=" + todoUsuarios + "]";
+	}
+
+	
+    
+
+
+ 
+    
     
     
 }

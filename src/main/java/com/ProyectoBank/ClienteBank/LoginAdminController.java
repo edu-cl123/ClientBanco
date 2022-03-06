@@ -2,43 +2,43 @@ package com.ProyectoBank.ClienteBank;
 
 import java.io.IOException;
 
-import ConexionSocket.Connection;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import modeloPaqueteEnvio.PaqueteEnv;
+import modelos.Admin;
 import modelos.Cuenta;
 import modelos.Usuario;
 
-public class RegistroController {
+public class LoginAdminController {
 	
 	@FXML
-	private TextField txDni;
-	
+	private TextField txIdCard;
 	@FXML
 	private TextField txPin;
-	
-	@FXML
-	private TextField txFullName;
-	
-	
+
 	@FXML
 	protected void initialize() {
 
 	}
-	
+
 	@FXML
-	private void Resgistro() {
+	public void enviarAdmin() {
 		
-		Usuario usuario =new Usuario("",txFullName.getText(),Integer.parseInt(txPin.getText()),txDni.getText(),ModeloController.admin);
+		Admin a =new Admin(Integer.parseInt(txIdCard.getText()),Integer.parseInt(txPin.getText()));
 		
-		PaqueteEnv paquete =new PaqueteEnv(4,usuario,new Cuenta() ,false);
+		PaqueteEnv p=new PaqueteEnv(1,new Usuario(),new Cuenta(),a,false);
+		System.out.println("Cambios");
 		try {
-			Connection.sendDataToServer(paquete);
+			ConexionSocket.Connection.sendDataToServer(p);
+
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
+
+
 
 }
